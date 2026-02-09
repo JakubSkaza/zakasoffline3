@@ -41,6 +41,7 @@ function initNavbar() {
 function initMenu() {
   const hamburger = document.querySelector('.nav__hamburger');
   const menu = document.getElementById('menu');
+  const menuLinks = menu.querySelectorAll('a'); // ← wszystkie linki w menu
   hamburger.addEventListener('click', () => {
   const isOpen = menu.classList.contains('open');
   if (!isOpen) {
