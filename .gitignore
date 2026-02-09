@@ -1,0 +1,14 @@
+# Pinegrow
+_pgbackup/
+_pginfo/
+pinegrow.json
+
+# System
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logi
+*.log
