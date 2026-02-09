@@ -51,6 +51,14 @@ function initMenu() {
   menu.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', !isOpen);
   });
+  // 🔽 ZAMYKANIE PO KLIKNIĘCIU W LINK
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
 }
 
 function initDraggable() {
