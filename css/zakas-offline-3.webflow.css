@@ -260,7 +260,8 @@ li {
 
 img {
     max-width: 100%;
-    display: inline-block;
+    height: auto;
+    display: block;
 }
 
 label {
