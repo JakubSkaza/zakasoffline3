@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initMinimap();
     initFloating();
     initMarqi();
-    initParalax();
     initWordup();
   }
   if (document.body.dataset.page === 'sztuka') {
@@ -203,25 +202,6 @@ function initMarqi() {
   });
 }
 
-function initParalax() {
-  gsap.registerPlugin(ScrollTrigger);
-  // zbierz wszystkie sekcje
-  const sekcje = gsap.utils.toArray(".sekcja");
-  // przeleć pętlą, ale bez ostatniej (bo nie ma po niej "następnej")
-  sekcje.forEach((sekcja, i) => {
-    if (i === sekcje.length - 1) return; 
-    gsap.to(sekcja, {
-      y: 250,
-      ease: "none",
-      scrollTrigger: {
-        trigger: sekcje[i + 1],      // następna sekcja uruchamia animację
-        start: "top 90%",
-        end: "bottom bottom",
-        scrub: true
-      }
-    });
-  });
-}
 
 function initWordup() {
   const textContainers = document.querySelectorAll(".word");
